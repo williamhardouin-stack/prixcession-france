@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "prixcession-france",
+  "title": "PrixCession France",
+  "description": "Calcule des repères de prix à partir des cessions de fonds de commerce publiées au BODACC.",
+  "version": "0.1.0",
+  "buildTag": "latest",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "input": "../INPUT_SCHEMA.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}
