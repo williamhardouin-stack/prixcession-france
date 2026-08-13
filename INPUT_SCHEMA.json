@@ -1,0 +1,60 @@
+{
+  "title": "Créer un repère de prix de cession",
+  "description": "Choisissez une activité, une zone et une période. L'Actor recherche des cessions déjà réalisées dans le BODACC et calcule des statistiques indicatives.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "activityKeywords": {
+      "title": "Mots-clés de l'activité",
+      "type": "array",
+      "description": "Exemple : boulangerie, pâtisserie.",
+      "editor": "stringList",
+      "default": ["boulangerie", "pâtisserie"],
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {"type": "string", "minLength": 2}
+    },
+    "departments": {
+      "title": "Départements",
+      "type": "array",
+      "description": "Exemple : 75, 92, 69. Laissez vide pour toute la France.",
+      "editor": "stringList",
+      "default": ["75"],
+      "maxItems": 20,
+      "items": {"type": "string", "minLength": 2, "maxLength": 3}
+    },
+    "monthsBack": {
+      "title": "Nombre de mois à analyser",
+      "type": "integer",
+      "default": 24,
+      "minimum": 1,
+      "maximum": 60,
+      "editor": "number"
+    },
+    "maxComparables": {
+      "title": "Nombre maximum d'exemples",
+      "type": "integer",
+      "default": 40,
+      "minimum": 5,
+      "maximum": 200,
+      "editor": "number"
+    },
+    "minPriceEur": {
+      "title": "Prix minimum retenu (€)",
+      "type": "integer",
+      "default": 1000,
+      "minimum": 1,
+      "maximum": 100000000,
+      "editor": "number"
+    },
+    "maxPriceEur": {
+      "title": "Prix maximum retenu (€)",
+      "type": "integer",
+      "default": 5000000,
+      "minimum": 1000,
+      "maximum": 1000000000,
+      "editor": "number"
+    }
+  },
+  "required": ["activityKeywords"]
+}
