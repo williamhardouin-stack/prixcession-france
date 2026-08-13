@@ -123,3 +123,9 @@ async def main() -> None:
         await Actor.set_status_message(
             f"Terminé : {len(comparables)} comparables trouvés pour {', '.join(keywords)}."
         )
+
+
+if __name__ == "__main__":
+    import asyncio
+
+    asyncio.run(main())
