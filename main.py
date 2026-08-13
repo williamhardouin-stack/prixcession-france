@@ -120,6 +120,7 @@ async def main() -> None:
         # through the built-in apify-default-dataset-item event.
         await Actor.push_data([summary, *comparables])
         await Actor.set_value("OUTPUT", summary)
+        await Actor.charge(event_name="report-generated")
         await Actor.set_status_message(
             f"Terminé : {len(comparables)} comparables trouvés pour {', '.join(keywords)}."
         )
