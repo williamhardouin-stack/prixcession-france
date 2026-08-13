@@ -1,0 +1,17 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Rapport PrixCession France",
+  "description": "Un résumé statistique suivi des transactions comparables utilisées.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Rapport et comparables",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Résumé JSON",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+    }
+  }
+}

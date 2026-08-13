@@ -1,0 +1,95 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "record_type": {
+        "type": "string",
+        "title": "Type de ligne",
+        "description": "summary pour le rapport, comparable pour une transaction source."
+      },
+      "transaction_price_eur": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "title": "Prix de cession (€)"
+      },
+      "publication_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Date de publication"
+      },
+      "company": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Entreprise"
+      },
+      "city": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Ville"
+      },
+      "department_code": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Département"
+      },
+      "activity_excerpt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Extrait de l'avis"
+      },
+      "official_url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Avis officiel"
+      },
+      "bodacc_id": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Identifiant BODACC"
+      }
+    },
+    "required": [
+      "record_type"
+    ]
+  },
+  "views": {
+    "overview": {
+      "title": "Rapport et comparables",
+      "transformation": {
+        "fields": [
+          "record_type",
+          "transaction_price_eur",
+          "publication_date",
+          "company",
+          "city",
+          "department_code",
+          "activity_excerpt",
+          "official_url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}
