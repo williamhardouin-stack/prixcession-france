@@ -26,6 +26,7 @@
     "monthsBack": {
       "title": "Nombre de mois à analyser",
       "type": "integer",
+      "description": "Période passée utilisée pour rechercher les cessions comparables.",
       "default": 24,
       "minimum": 1,
       "maximum": 60,
@@ -34,6 +35,7 @@
     "maxComparables": {
       "title": "Nombre maximum d'exemples",
       "type": "integer",
+      "description": "Nombre maximal de transactions comparables affichées dans le résultat.",
       "default": 40,
       "minimum": 5,
       "maximum": 200,
@@ -42,6 +44,7 @@
     "minPriceEur": {
       "title": "Prix minimum retenu (€)",
       "type": "integer",
+      "description": "Les transactions moins chères que ce montant sont écartées.",
       "default": 1000,
       "minimum": 1,
       "maximum": 100000000,
@@ -50,6 +53,7 @@
     "maxPriceEur": {
       "title": "Prix maximum retenu (€)",
       "type": "integer",
+      "description": "Les transactions plus chères que ce montant sont écartées.",
       "default": 5000000,
       "minimum": 1000,
       "maximum": 1000000000,
