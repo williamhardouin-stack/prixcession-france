@@ -66,12 +66,12 @@ async def main() -> None:
         actor_input = await Actor.get_input() or {}
         keywords = [
             str(keyword).strip()
-            for keyword in actor_input.get("activityKeywords", ["boulangerie", "pâtisserie"])
+            for keyword in actor_input.get("activityKeywords", [])
             if str(keyword).strip()
         ]
         departments = [
             str(department).strip().upper()
-            for department in actor_input.get("departments", ["75"])
+            for department in actor_input.get("departments", [])
             if str(department).strip()
         ]
         months_back = int(actor_input.get("monthsBack", 24))

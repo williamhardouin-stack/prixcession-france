@@ -1,15 +1,14 @@
 {
   "title": "Créer un repère de prix de cession",
-  "description": "Choisissez une activité, une zone et une période. L'Actor recherche des cessions déjà réalisées dans le BODACC et calcule des statistiques indicatives.",
+  "description": "Indiquez l'activité recherchée et, si vous le souhaitez, un ou plusieurs départements. L'Actor recherche des cessions déjà réalisées dans le BODACC et calcule des statistiques indicatives.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "activityKeywords": {
       "title": "Mots-clés de l'activité",
       "type": "array",
-      "description": "Exemple : boulangerie, pâtisserie.",
+      "description": "Saisissez une ou plusieurs activités, par exemple restaurant, coiffure ou boulangerie.",
       "editor": "stringList",
-      "default": ["boulangerie", "pâtisserie"],
       "minItems": 1,
       "maxItems": 10,
       "items": {"type": "string", "minLength": 2}
@@ -17,9 +16,8 @@
     "departments": {
       "title": "Départements",
       "type": "array",
-      "description": "Exemple : 75, 92, 69. Laissez vide pour toute la France.",
+      "description": "Facultatif. Saisissez un ou plusieurs codes, par exemple 69 ou 75. Laissez vide pour toute la France.",
       "editor": "stringList",
-      "default": ["75"],
       "maxItems": 20,
       "items": {"type": "string", "minLength": 2, "maxLength": 3}
     },
